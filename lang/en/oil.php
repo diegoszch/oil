@@ -23,7 +23,6 @@ return array(
         'could_not_find' => 'Could not find',
         'updated' => 'Updated',
         'could_not_update' => 'Could not update',
-        'nothing_updated' => 'Nothing updated',
-                
+        'nothing_updated' => 'Nothing updated',                
     ),
 );
