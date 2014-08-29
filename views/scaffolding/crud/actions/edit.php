@@ -14,12 +14,12 @@
 
 				if ($<?php echo $singular_name; ?>->save())
 				{
-					Session::set_flash('success', 'Updated <?php echo $singular_name; ?> #'.$id);
+					Session::set_flash('success', '<?php echo \Lang::get('oil.controller.updated'); ?> <?php echo $singular_name; ?> #'.$id);
 					Response::redirect('<?php echo $uri; ?>');
 				}
 				else
 				{
-					Session::set_flash('error', 'Nothing updated.');
+					Session::set_flash('error', '<?php echo \Lang::get('oil.controller.nothing_updated'); ?>.');
 				}
 			}
 			else

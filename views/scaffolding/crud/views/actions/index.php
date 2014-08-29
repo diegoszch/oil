@@ -1,4 +1,4 @@
-<h2>Listing <?php echo \Str::ucfirst($plural_name); ?></h2>
+<h2><?php echo \Lang::get('oil.view.listing'); ?> <?php echo \Str::ucfirst($plural_name); ?></h2>
 <br>
 <?php echo "<?php if (\${$plural_name}): ?>"; ?>
 
@@ -19,9 +19,9 @@
 			<td><?php echo '<?php'; ?> echo $item<?php echo '->'.$field['name']; ?>; <?php echo '?>'; ?></td>
 <?php endforeach; ?>
 			<td>
-				<?php echo '<?php'; ?> echo Html::anchor('<?php echo $uri; ?>/view/'.$item->id, 'View'); <?php echo '?>'; ?> |
-				<?php echo '<?php'; ?> echo Html::anchor('<?php echo $uri; ?>/edit/'.$item->id, 'Edit'); <?php echo '?>'; ?> |
-				<?php echo '<?php'; ?> echo Html::anchor('<?php echo $uri; ?>/delete/'.$item->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); <?php echo '?>'; ?>
+				<?php echo '<?php'; ?> echo Html::anchor('<?php echo $uri; ?>/view/'.$item->id, '<?php echo \Lang::get('oil.view.view'); ?>'); <?php echo '?>'; ?> |
+				<?php echo '<?php'; ?> echo Html::anchor('<?php echo $uri; ?>/edit/'.$item->id, '<?php echo \Lang::get('oil.view.edit'); ?>'); <?php echo '?>'; ?> |
+				<?php echo '<?php'; ?> echo Html::anchor('<?php echo $uri; ?>/delete/'.$item->id, '<?php echo \Lang::get('oil.view.delete'); ?>', array('onclick' => "return confirm('<?php echo \Lang::get('oil.view.are_you_sure'); ?>')")); <?php echo '?>'; ?>
 
 
 			</td>
@@ -32,11 +32,11 @@
 
 <?php echo '<?php else: ?>'; ?>
 
-<p>No <?php echo \Str::ucfirst($plural_name); ?>.</p>
+<p><?php echo \Lang::get('oil.view.no'); ?> <?php echo \Str::ucfirst($plural_name); ?>.</p>
 
 <?php echo '<?php endif; ?>'; ?>
 <p>
-	<?php echo '<?php'; ?> echo Html::anchor('<?php echo $uri; ?>/create', 'Add new <?php echo \Inflector::humanize($singular_name); ?>', array('class' => 'btn btn-success')); <?php echo '?>'; ?>
+	<?php echo '<?php'; ?> echo Html::anchor('<?php echo $uri; ?>/create', '<?php echo \Lang::get('oil.view.add_new'); ?> <?php echo \Inflector::humanize($singular_name); ?>', array('class' => 'btn btn-success')); <?php echo '?>'; ?>
 
 
 </p>

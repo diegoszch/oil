@@ -9,14 +9,14 @@
 
 			if ($<?php echo $singular_name; ?>->save())
 			{
-				Session::set_flash('success', e('Updated <?php echo $singular_name; ?> #' . $id));
+				Session::set_flash('success', e('<?php echo \Lang::get('oil.controller.updated'); ?> <?php echo $singular_name; ?> #' . $id));
 
 				Response::redirect('<?php echo $uri; ?>');
 			}
 
 			else
 			{
-				Session::set_flash('error', e('Could not update <?php echo $singular_name; ?> #' . $id));
+				Session::set_flash('error', e('<?php echo \Lang::get('oil.controller.could_not_update'); ?> <?php echo $singular_name; ?> #' . $id));
 			}
 		}
 

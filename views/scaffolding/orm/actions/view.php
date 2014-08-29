@@ -2,7 +2,7 @@
 
 		if ( ! $data['<?php echo $singular_name ?>'] = Model_<?php echo $model_name ?>::find($id))
 		{
-			Session::set_flash('error', 'Could not find <?php echo $singular_name; ?> #'.$id);
+			Session::set_flash('error', '<?php \Lang::get('oil.controller.could_not_find'); ?> <?php echo $singular_name; ?> #'.$id);
 			Response::redirect('<?php echo $uri ?>');
 		}
 

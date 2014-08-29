@@ -26,6 +26,7 @@ class Command
 	public static function init($args)
 	{
 		\Config::load('oil', true);
+                \Lang::load('oil', 'oil');
 
 		// Remove flag options from the main argument list
 		$args = self::_clear_args($args);

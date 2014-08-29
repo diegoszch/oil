@@ -2,7 +2,7 @@
 
 		if ( ! $<?php echo $singular_name; ?> = Model_<?php echo $model_name; ?>::find($id))
 		{
-			Session::set_flash('error', 'Could not find <?php echo $singular_name; ?> #'.$id);
+			Session::set_flash('error', '<?php echo \Lang::get('oil.controller.could_not_find'); ?> <?php echo $singular_name; ?> #'.$id);
 			Response::redirect('<?php echo $uri ?>');
 		}
 
@@ -16,14 +16,14 @@
 
 			if ($<?php echo $singular_name; ?>->save())
 			{
-				Session::set_flash('success', 'Updated <?php echo $singular_name; ?> #' . $id);
+				Session::set_flash('success', '<?php echo \Lang::get('oil.controller.updated'); ?> <?php echo $singular_name; ?> #' . $id);
 
 				Response::redirect('<?php echo $uri ?>');
 			}
 
 			else
 			{
-				Session::set_flash('error', 'Could not update <?php echo $singular_name; ?> #' . $id);
+				Session::set_flash('error', '<?php echo \Lang::get('oil.controller.could_not_update'); ?> <?php echo $singular_name; ?> #' . $id);
 			}
 		}
 

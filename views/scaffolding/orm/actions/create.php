@@ -12,14 +12,14 @@
 
 				if ($<?php echo $singular_name; ?> and $<?php echo $singular_name; ?>->save())
 				{
-					Session::set_flash('success', 'Added <?php echo $singular_name; ?> #'.$<?php echo $singular_name; ?>->id.'.');
+					Session::set_flash('success', '<?php echo \Lang::get('oil.controller.added'); ?> <?php echo $singular_name; ?> #'.$<?php echo $singular_name; ?>->id.'.');
 
 					Response::redirect('<?php echo $uri; ?>');
 				}
 
 				else
 				{
-					Session::set_flash('error', 'Could not save <?php echo $singular_name; ?>.');
+					Session::set_flash('error', '<?php echo \Lang::get('oil.controller.could_not_save'); ?> <?php echo $singular_name; ?>.');
 				}
 			}
 			else

@@ -21,7 +21,7 @@ endswitch; ?>
 <?php endforeach; ?>
 		<div class="form-group">
 			<label class='control-label'>&nbsp;</label>
-			<?php echo '<?php'; ?> echo Form::submit('submit', 'Save', array('class' => 'btn btn-primary')); <?php echo '?>'; ?>
+			<?php echo '<?php'; ?> echo Form::submit('submit', '<?php echo \Lang::get('oil.view.save'); ?>', array('class' => 'btn btn-primary')); <?php echo '?>'; ?>
 		</div>
 	</fieldset>
 <?php if ($csrf): ?>
